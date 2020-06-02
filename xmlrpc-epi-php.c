@@ -246,6 +246,7 @@ PHP_MINIT_FUNCTION(xmlrpc)
 PHP_MINFO_FUNCTION(xmlrpc)
 {
 	php_info_print_table_start();
+	php_info_print_table_row(2, "XMLRPC extension version", PHP_XMLRPC_VERSION);
 	php_info_print_table_row(2, "core library version", XMLRPC_GetVersionString());
 	php_info_print_table_row(2, "author", "Dan Libby");
 	php_info_print_table_row(2, "homepage", "http://xmlrpc-epi.sourceforge.net");
