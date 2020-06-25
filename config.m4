@@ -101,3 +101,5 @@ elif test "$PHP_XMLRPC" != "no"; then
   PHP_NEW_EXTENSION(xmlrpc,xmlrpc-epi-php.c, $ext_shared)
   XMLRPC_MODULE_TYPE=external
 fi
+
+PHP_ADD_MAKEFILE_FRAGMENT
