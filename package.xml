@@ -10,6 +10,10 @@ http://pear.php.net/dtd/package-2.0.xsd">
   These functions can be used to write XML-RPC servers and clients. You can find
   more information about XML-RPC at http://www.xmlrpc.com/, and more documentation
   on this extension and its functions at http://xmlrpc-epi.sourceforge.net/.
+
+  The extension is unbundled from php-src as of PHP 8.0.0, because the underlying
+  libxmlrpc has obviously been abandoned. It is recommended to reevaluate using
+  this extension.
  </description>
  <lead>
   <name>Christoph M. Becker</name>
@@ -29,7 +33,8 @@ http://pear.php.net/dtd/package-2.0.xsd">
  <license uri="http://www.php.net/license">PHP</license>
  <notes>
 <![CDATA[
-
+This is the snapshot of ext/xmlrpc just before it was unbundled from php-src.
+Only minimal modifications have been made thereafter.
 ]]>
  </notes>
  <contents>

@@ -58,7 +58,7 @@ extern zend_module_entry xmlrpc_module_entry;
 #define phpext_xmlrpc_ptr &xmlrpc_module_entry
 
 #include "php_version.h"
-#define PHP_XMLRPC_VERSION "1.0.0-dev"
+#define PHP_XMLRPC_VERSION "1.0.0RC1"
 
 PHP_MINIT_FUNCTION(xmlrpc);
 PHP_MINFO_FUNCTION(xmlrpc);
