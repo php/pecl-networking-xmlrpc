@@ -6,7 +6,7 @@ image: Visual Studio 2019
 clone_folder: c:\projects\xmlrpc
 environment:
   BIN_SDK_VER: 2.2.0
-  DEPS: libiconv-1.16-2 libxml2-2.9.10
+  DEPS: libiconv-1.16-3 libxml2-2.9.10
   matrix:
     - PHP_VER: 8.0
       TS: 0
