@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd">
+ <name>xmlrpc</name>
+ <channel>pecl.php.net</channel>
+ <summary>Functions to write XML-RPC servers and clients</summary>
+ <description>
+  These functions can be used to write XML-RPC servers and clients. You can find
+  more information about XML-RPC at http://www.xmlrpc.com/, and more documentation
+  on this extension and its functions at http://xmlrpc-epi.sourceforge.net/.
+ </description>
+ <lead>
+  <name>Christoph M. Becker</name>
+  <user>cmb</user>
+  <email>cmbecker69@gmx.de</email>
+  <active>yes</active>
+ </lead>
+ <date>2021-01-04</date>
+ <version>
+  <release>1.0.0RC1</release>
+  <api>1.0</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www.php.net/license">PHP</license>
+ <notes>
+<![CDATA[
+
+]]>
+ </notes>
+ <contents>
+  <dir name="/">
+   <file name="config.m4" role="src"/>
+   <file name="config.w32" role="src"/>
+   <file name="CREDITS" role="doc"/>
+   <file name="EXPERIMENTAL" role="doc"/>
+   <file name="LICENSE" role="doc"/>
+   <file name="Makefile.frag" role="src"/>
+   <file name="package.xml" role="src"/>
+   <file name="php_xmlrpc.h" role="src"/>
+   <file name="xmlrpc-epi-php.c" role="src"/>
+   <file name="xmlrpc.stub.php" role="src"/>
+   <file name="xmlrpc_arginfo.h" role="src"/>
+   <dir name="libxmlrpc">
+    <file name="base64.c" role="src"/>
+    <file name="base64.h" role="src"/>
+    <file name="COPYING" role="src"/>
+    <file name="encodings.c" role="src"/>
+    <file name="encodings.h" role="src"/>
+    <file name="queue.c" role="src"/>
+    <file name="queue.h" role="src"/>
+    <file name="README.md" role="src"/>
+    <file name="simplestring.c" role="src"/>
+    <file name="simplestring.h" role="src"/>
+    <file name="system_methods.c" role="src"/>
+    <file name="system_methods_private.h" role="src"/>
+    <file name="xmlrpc.c" role="src"/>
+    <file name="xmlrpc.h" role="src"/>
+    <file name="xmlrpc_introspection.c" role="src"/>
+    <file name="xmlrpc_introspection.h" role="src"/>
+    <file name="xmlrpc_introspection_private.h" role="src"/>
+    <file name="xmlrpc_private.h" role="src"/>
+    <file name="xml_element.c" role="src"/>
+    <file name="xml_element.h" role="src"/>
+    <file name="xml_to_dandarpc.c" role="src"/>
+    <file name="xml_to_dandarpc.h" role="src"/>
+    <file name="xml_to_soap.c" role="src"/>
+    <file name="xml_to_soap.h" role="src"/>
+    <file name="xml_to_xmlrpc.c" role="src"/>
+    <file name="xml_to_xmlrpc.h" role="src"/>
+   </dir>
+   <dir name="tests">
+    <file name="001.phpt" role="test"/>
+    <file name="002.phpt" role="test"/>
+    <file name="003.phpt" role="test"/>
+    <file name="004.phpt" role="test"/>
+    <file name="005.phpt" role="test"/>
+    <file name="006.phpt" role="test"/>
+    <file name="007.phpt" role="test"/>
+    <file name="bug18916.phpt" role="test"/>
+    <file name="bug37057.phpt" role="test"/>
+    <file name="bug38431.phpt" role="test"/>
+    <file name="bug40576.phpt" role="test"/>
+    <file name="bug40576_64bit.phpt" role="test"/>
+    <file name="bug42189.phpt" role="test"/>
+    <file name="bug42736.phpt" role="test"/>
+    <file name="bug44996.phpt" role="test"/>
+    <file name="bug45226.phpt" role="test"/>
+    <file name="bug45555.phpt" role="test"/>
+    <file name="bug45556.phpt" role="test"/>
+    <file name="bug47818.phpt" role="test"/>
+    <file name="bug50282.phpt" role="test"/>
+    <file name="bug50285.phpt" role="test"/>
+    <file name="bug50761.phpt" role="test"/>
+    <file name="bug51288.phpt" role="test"/>
+    <file name="bug61097.phpt" role="test"/>
+    <file name="bug61264.phpt" role="test"/>
+    <file name="bug68027.phpt" role="test"/>
+    <file name="bug70526.phpt" role="test"/>
+    <file name="bug70728.phpt" role="test"/>
+    <file name="bug70728_64bit.phpt" role="test"/>
+    <file name="bug71501.phpt" role="test"/>
+    <file name="bug72155.phpt" role="test"/>
+    <file name="bug72647.phpt" role="test"/>
+    <file name="bug74975.phpt" role="test"/>
+    <file name="bug77242.phpt" role="test"/>
+    <file name="bug77380.phpt" role="test"/>
+   </dir>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>8.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0b1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <providesextension>xmlrpc</providesextension>
+ <extsrcrelease />
+</package>
