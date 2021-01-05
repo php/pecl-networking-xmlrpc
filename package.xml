@@ -53,12 +53,12 @@ Only minimal modifications have been made thereafter.
    <dir name="libxmlrpc">
     <file name="base64.c" role="src"/>
     <file name="base64.h" role="src"/>
-    <file name="COPYING" role="src"/>
+    <file name="COPYING" role="doc"/>
     <file name="encodings.c" role="src"/>
     <file name="encodings.h" role="src"/>
     <file name="queue.c" role="src"/>
     <file name="queue.h" role="src"/>
-    <file name="README.md" role="src"/>
+    <file name="README.md" role="doc"/>
     <file name="simplestring.c" role="src"/>
     <file name="simplestring.h" role="src"/>
     <file name="system_methods.c" role="src"/>
