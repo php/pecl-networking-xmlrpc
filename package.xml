@@ -45,7 +45,6 @@ Only minimal modifications have been made thereafter.
    <file name="EXPERIMENTAL" role="doc"/>
    <file name="LICENSE" role="doc"/>
    <file name="Makefile.frag" role="src"/>
-   <file name="package.xml" role="src"/>
    <file name="php_xmlrpc.h" role="src"/>
    <file name="xmlrpc-epi-php.c" role="src"/>
    <file name="xmlrpc.stub.php" role="src"/>
