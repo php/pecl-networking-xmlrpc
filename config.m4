@@ -20,6 +20,7 @@ PHP_ARG_WITH([iconv-dir],
 if test "$PHP_XMLRPC" != "no"; then
 
   PHP_ADD_EXTENSION_DEP(xmlrpc, libxml)
+  PHP_ADD_EXTENSION_DEP(xmlrpc, xml)
   PHP_SUBST(XMLRPC_SHARED_LIBADD)
   AC_DEFINE(HAVE_XMLRPC,1,[ ])
 
