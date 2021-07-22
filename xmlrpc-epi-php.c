@@ -227,10 +227,14 @@ PHP_MINIT_FUNCTION(xmlrpc)
 	zend_class_entry ce;
 	INIT_CLASS_ENTRY(ce, "XmlRpcServer", class_XmlRpcServer_methods);
 	xmlrpc_server_ce = zend_register_internal_class(&ce);
-	xmlrpc_server_ce->ce_flags |= ZEND_ACC_FINAL;
 	xmlrpc_server_ce->create_object = xmlrpc_server_create_object;
+#if PHP_VERSION_ID < 80100
 	xmlrpc_server_ce->serialize = zend_class_serialize_deny;
 	xmlrpc_server_ce->unserialize = zend_class_unserialize_deny;
+	xmlrpc_server_ce->ce_flags |= ZEND_ACC_FINAL;
+#else
+	xmlrpc_server_ce->ce_flags |= ZEND_ACC_FINAL | ZEND_ACC_NOT_SERIALIZABLE;
+#endif
 
 	memcpy(&xmlrpc_server_object_handlers, &std_object_handlers, sizeof(zend_object_handlers));
 	xmlrpc_server_object_handlers.offset = XtOffsetOf(xmlrpc_server_data, std);
