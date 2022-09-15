@@ -7,6 +7,7 @@ if (!extension_loaded("xmlrpc")) print "skip";
 --FILE--
 <?php
 
+#[AllowDynamicProperties]
 class Foo {
 
 }
