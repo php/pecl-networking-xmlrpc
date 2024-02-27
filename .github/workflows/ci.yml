@@ -25,13 +25,12 @@ jobs:
           echo $extension_version >> $env:GITHUB_ENV
       - name: Setup PHP
         id: setup-php
-        uses: cmb69/setup-php-sdk@v0.3
+        uses: php/setup-php-sdk@v0.8
         with:
-          version: ${{matrix.version}}
-          arch: ${{matrix.arch}}
-          ts: ${{matrix.ts}}
-          deps: libiconv, libxml2
-      - run: tree /a /f deps/include
+            version: ${{matrix.version}}
+            arch: ${{matrix.arch}}
+            ts: ${{matrix.ts}}
+            deps: "libiconv,libxml2"
       - name: Enable Developer Command Prompt
         uses: ilammy/msvc-dev-cmd@v1
         with:
