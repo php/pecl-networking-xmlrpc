@@ -7,22 +7,21 @@ jobs:
         shell: cmd
     strategy:
       matrix:
-          version: ['8.0', '8.1']
+          version: ['8.0', '8.1', '8.2', '8.3']
           arch: [x64, x86]
           ts: [ts]
     runs-on: windows-2019
     steps:
       - name: Checkout xmlrpc
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Setup PHP
         id: setup-php
-        uses: cmb69/setup-php-sdk@v0.3
+        uses: php/setup-php-sdk@v0.8
         with:
           version: ${{matrix.version}}
           arch: ${{matrix.arch}}
           ts: ${{matrix.ts}}
           deps: libiconv, libxml2
-      - run: tree /a /f deps/include
       - name: Enable Developer Command Prompt
         uses: ilammy/msvc-dev-cmd@v1
         with:
@@ -35,4 +34,4 @@ jobs:
       - name: make
         run: nmake
       - name: test
-        run: nmake test TESTS="-g FAIL,SKIP --show-diff tests"
+        run: nmake test TESTS="--show-diff tests"
