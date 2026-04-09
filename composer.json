@@ -1,0 +1,19 @@
+{
+  "name": "pecl/xmlrpc",
+  "type": "php-ext",
+  "license": "PHP-3.01",
+  "description": "Functions to write XML-RPC servers and clients",
+  "require": {
+    "php": ">=8.0.0"
+  },
+  "php-ext": {
+    "extension-name": "xmlrpc",
+    "configure-options": [
+      {
+        "name": "with-xmlrpc",
+        "description": "XMLRPC-EPI support",
+        "needs-value": false
+      }
+    ]
+  }
+}
