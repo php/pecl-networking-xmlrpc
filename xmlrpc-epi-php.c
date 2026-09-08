@@ -180,7 +180,7 @@ zend_class_entry *xmlrpc_server_ce;
 static zend_object_handlers xmlrpc_server_object_handlers;
 
 static inline xmlrpc_server_data *xmlrpc_server_from_obj(zend_object *obj) {
-	return (xmlrpc_server_data *)((char *)(obj) - XtOffsetOf(xmlrpc_server_data, std));
+	return (xmlrpc_server_data *)((char *)(obj) - offsetof(xmlrpc_server_data, std));
 }
 
 #define Z_XMLRPC_SERVER_P(zv) xmlrpc_server_from_obj(Z_OBJ_P(zv))
@@ -237,7 +237,7 @@ PHP_MINIT_FUNCTION(xmlrpc)
 #endif
 
 	memcpy(&xmlrpc_server_object_handlers, &std_object_handlers, sizeof(zend_object_handlers));
-	xmlrpc_server_object_handlers.offset = XtOffsetOf(xmlrpc_server_data, std);
+	xmlrpc_server_object_handlers.offset = offsetof(xmlrpc_server_data, std);
 	xmlrpc_server_object_handlers.free_obj = xmlrpc_server_free_obj;
 	xmlrpc_server_object_handlers.get_gc = xmlrpc_server_get_gc;
 	xmlrpc_server_object_handlers.get_constructor = xmlrpc_server_get_constructor;
